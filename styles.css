@@ -1,0 +1,133 @@
+/*global*/
+
+body{
+    display: grid;
+    background-color: rgb(227, 249, 253);
+}
+
+.container {grid-area: nav; }
+header { grid-area: header; }
+main { grid-area: main; }
+div { grid-area: div; }
+
+#photo {
+    
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 20rem;
+    border-radius: 20%;
+}
+
+.logos {
+    opacity: 70%;
+}
+
+@media only screen and (max-width: 768px) {
+
+/*mobile*/
+
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "nav"
+                         "header"
+                         "main"
+                         "div";
+}
+
+
+
+
+
+
+
+
+header {
+    text-align: center;
+}
+
+} /*close mobile*/
+
+@media only screen and (min-width: 768px) {
+    
+/*desktop*/
+
+    body{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-template-areas: "nav     nav"
+                             "header  header"
+                             "main    main"
+                             "div     div";
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: white;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    header {
+        display: grid;
+        padding-top: 10px;
+        grid-template-columns: 8em auto;
+        grid-template-rows: 5em 10em 10em; 
+        color: rgb(58, 59, 61); 
+    }
+
+    header > p {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding-left: 3em;
+    }
+
+    header > h1 {
+        color: black;
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #photo {
+        object-fit: cover;
+        padding-top: 1em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        height: 13rem;
+        width: auto;
+        border-radius: 20%;
+    }
+
+    main {
+        display: grid;
+        grid-template-areas: "jobs jobs"
+                             "jobs jobs"
+                             "edu_skills edu_skills"
+
+    }
+
+
+    .jobs {
+        background-color: rgba(243, 233, 245, 0.918);
+        grid-area: jobs;
+    }   
+
+    .education_skills {
+        grid-area: edu_skills;
+    }
+
+} /*close desktop*/
