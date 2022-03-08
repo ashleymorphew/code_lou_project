@@ -2,7 +2,8 @@
 
 body{
     display: grid;
-    background-color: rgb(227, 249, 253);
+    background-color: rgb(206, 191, 197);
+    font-family: 'Bodoni Moda', serif;
 }
 
 .container {grid-area: nav; }
@@ -12,7 +13,7 @@ div { grid-area: div; }
 
 #photo {
     
-    padding-top: 1em;
+    padding-top: 10px;
     padding-bottom: 1em;
     display: block;
     margin-left: auto;
@@ -30,7 +31,7 @@ div { grid-area: div; }
 
 /*mobile*/
 
-body{
+body {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -38,6 +39,19 @@ body{
                          "header"
                          "main"
                          "div";
+    
+}
+
+main {
+    box-sizing: border-box;
+    background-color: rgba(250, 245, 245, 0.726);
+    margin: 10px;
+    border-radius: 3%;
+    padding-left: 20px;
+}
+
+header > h1 {
+    padding-top: 8px;
 }
 
 .container {
@@ -84,16 +98,12 @@ body{
     color: white;
 }
 
-
-
-
-
-
-
-
-
 header {
     text-align: center;
+}
+
+#contact {
+    margin-left: 25%;
 }
 
 } /*close mobile*/
@@ -110,6 +120,9 @@ header {
                              "header  header"
                              "main    main"
                              "div     div";
+        
+        margin: 60px;
+        padding: 20px;
     }
 
     .container {
@@ -118,6 +131,27 @@ header {
         background-color: white;
         padding-top: 1em;
         padding-bottom: 1em;
+    }
+
+    .fa_bars {
+        display: none;
+    }
+
+    .logos {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        padding-top: 70%;
+        padding-left: 34%;
+    }
+
+    #content {
+        background-color: white;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
     }
 
     header {
@@ -139,15 +173,22 @@ header {
     header > h1 {
         color: black;
         width: 100%;
-        grid-column-start: 1;
-        grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        padding-left: 1em;
+    
+    }
+
+    header > p {
+        padding-left: 4em;
     }
 
     #photo {
         object-fit: cover;
         padding-top: 1em;
+        padding-left: 1em;
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 2;
@@ -157,22 +198,42 @@ header {
         border-radius: 20%;
     }
 
-    main {
-        display: grid;
-        grid-template-areas: "jobs jobs"
-                             "jobs jobs"
-                             "edu_skills edu_skills"
-
-    }
-
+    #job_1 { grid-area: job_1; }
+    #job_2 { grid-area: job_2; }
+    #job_3 { grid-area: job_3; }
+    #job_4 { grid-area: job_4; }
 
     .jobs {
-        background-color: rgba(243, 233, 245, 0.918);
-        grid-area: jobs;
-    }   
+        background-color: rgba(218, 206, 212, 0.445);
+        display: grid;
+        grid-template-areas: "job_1  job_2"
+                             "job_3  job_4";
+        width: 90%;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+    
+    #education { grid-area: education; }
+    #skills { grid-area: skills; }
 
     .education_skills {
-        grid-area: edu_skills;
+        display: grid;
+        grid-template-areas: "education skills";
+        background-color: rgba(218, 206, 212, 0.445);
+        width: 90%;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form-body {
+        display: grid;
+        width: 90%;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(218, 206, 212, 0.445);
     }
 
 } /*close desktop*/
