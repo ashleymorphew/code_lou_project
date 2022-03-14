@@ -1,9 +1,9 @@
 /*global*/
 
 body{
-    display: grid;
-    background-color: rgb(206, 191, 197);
     font-family: 'Bodoni Moda', serif;
+    background-image: radial-gradient(rgb(90, 85, 138), rgb(155, 101, 124));
+    
 }
 
 .container {grid-area: nav; }
@@ -12,19 +12,23 @@ main { grid-area: main; }
 div { grid-area: div; }
 
 #photo {
-    
     padding-top: 10px;
     padding-bottom: 1em;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: auto;
-    height: 20rem;
-    border-radius: 20%;
+    height: 18rem;
+    border-radius: 50px;
 }
 
 .logos {
     opacity: 70%;
+}
+
+.experience {
+    
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -43,19 +47,27 @@ body {
 }
 
 main {
-    box-sizing: border-box;
-    background-color: rgba(250, 245, 245, 0.726);
+    padding: .5em;
+    background-color: rgba(209, 209, 209, 0.63);
     margin: 10px;
-    border-radius: 3%;
+    border-radius: 10px;
     padding-left: 20px;
+}
+
+#about {
+    background-color: rgba(209, 209, 209, 0.63);
+    border-radius: 10px;
+    padding: .5em;
+    margin: 10px;
 }
 
 header > h1 {
     padding-top: 8px;
+    color: rgb(31, 31, 31);
 }
 
 .container {
-    width: 330px;
+    width: 100%;
     margin: auto;
     height: auto;
     color: white;
@@ -68,7 +80,7 @@ header > h1 {
     position: relative;
 }
 
-.navbar #myLinks {
+#myLinks {
     display: none;
 }
 
@@ -116,86 +128,85 @@ header {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: auto;
-        grid-template-areas: "nav     nav"
-                             "header  header"
-                             "main    main"
-                             "div     div";
+        grid-template-areas: "nav nav"
+                             "header header"
+                             "main main"
+                             "div div";
         
-        margin: 60px;
-        padding: 20px;
+        margin: auto;
+        width: 100%;
     }
 
     .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        background-color: white;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        background-color: rgba(235, 255, 255, 0.493);
+        padding-top: 1.2em;
+        padding-bottom: 1.2em;
+        width: 100%;
+        margin: auto;
+    
     }
 
-    .fa_bars {
+    .navbar {
+        display: flex;
+        gap: 8em;
+        justify-content: space-between;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    #myLinks {
+        display: flex;
+        gap: 4em;
+    }
+
+    #fa_bars {
         display: none;
     }
 
     .logos {
-        grid-row-start: 3;
-        grid-row-end: 4;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        padding-top: 70%;
-        padding-left: 34%;
+        padding-left: 50px;
+        
     }
 
     #content {
-        background-color: white;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+        background-color: rgba(242, 255, 255, 0.548);
+        width: 95%;
+        margin: auto;
         margin-top: 2em;
     }
+
+    #about { grid-area: about; }
+    header > h1 { grid-area: h1; }
+    #photo { grid-area: photo; }
+    .logos { grid-area: logos; }
 
     header {
         display: grid;
         padding-top: 10px;
-        grid-template-columns: 8em auto;
-        grid-template-rows: 5em 10em 10em; 
+        grid-template-areas: "h1 h1"
+                             "photo about"
+                             "logos logos";
         color: rgb(58, 59, 61); 
-    }
-
-    header > p {
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        padding-left: 3em;
     }
 
     header > h1 {
         color: black;
         width: 100%;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        grid-column-start: 1;
-        grid-column-end: 4;
         padding-left: 1em;
-    
     }
 
-    header > p {
-        padding-left: 4em;
+    #about {
+        padding-right: 1em;
+        font-size: 20px;
+        margin: 2em;
     }
 
     #photo {
         object-fit: cover;
-        padding-top: 1em;
-        padding-left: 1em;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        height: 13rem;
+        padding: 1em;
+        height: 14rem;
         width: auto;
-        border-radius: 20%;
+        border-radius: 50px;
     }
 
     #job_1 { grid-area: job_1; }
@@ -203,11 +214,10 @@ header {
     #job_3 { grid-area: job_3; }
     #job_4 { grid-area: job_4; }
 
-    .jobs {
-        background-color: rgba(218, 206, 212, 0.445);
+    .experience {
         display: grid;
-        grid-template-areas: "job_1  job_2"
-                             "job_3  job_4";
+        grid-template-areas: "job_1 job_2 job_3 job_4 ";
+        grid-gap: 2em;                    
         width: 90%;
         padding: 10px;
         margin-left: auto;
@@ -220,20 +230,22 @@ header {
     .education_skills {
         display: grid;
         grid-template-areas: "education skills";
-        background-color: rgba(218, 206, 212, 0.445);
         width: 90%;
         padding: 10px;
         margin-left: auto;
         margin-right: auto;
     }
 
+    #skills {
+        
+    }
+
     .form-body {
         display: grid;
-        width: 90%;
+        width: 100%;
         padding: 10px;
         margin-left: auto;
         margin-right: auto;
-        background-color: rgba(218, 206, 212, 0.445);
     }
 
 } /*close desktop*/
