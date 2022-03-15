@@ -10,6 +10,13 @@ body{
 header { grid-area: header; }
 main { grid-area: main; }
 div { grid-area: div; }
+#job_1 { grid-area: job_1; }
+#job_2 { grid-area: job_2; }
+#job_3 { grid-area: job_3; }
+#job_4 { grid-area: job_4; }
+#education { grid-area: education; }
+#skills { grid-area: skills; }
+
 
 #photo {
     padding-top: 10px;
@@ -26,12 +33,7 @@ div { grid-area: div; }
     opacity: 70%;
 }
 
-.experience {
-    
-
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 480px) {
 
 /*mobile*/
 
@@ -121,6 +123,24 @@ header {
 } /*close mobile*/
 
 @media only screen and (min-width: 768px) {
+
+/*tablet*/
+
+.experience {
+    display: grid;
+    grid-template-areas: "job_1 job_2"
+                         "job_3 job_4";
+}
+
+.education_skills {
+    display: grid;
+    grid-template-areas: "education skills";
+}
+
+
+} /*close tablet*/
+
+@media only screen and (min-width: 992px) {
     
 /*desktop*/
 
@@ -137,8 +157,7 @@ header {
         width: 100%;
     }
 
-    .container {
-        background-color: rgba(235, 255, 255, 0.493);
+    .container {   
         padding-top: 1.2em;
         padding-bottom: 1.2em;
         width: 100%;
@@ -209,11 +228,6 @@ header {
         border-radius: 50px;
     }
 
-    #job_1 { grid-area: job_1; }
-    #job_2 { grid-area: job_2; }
-    #job_3 { grid-area: job_3; }
-    #job_4 { grid-area: job_4; }
-
     .experience {
         display: grid;
         grid-template-areas: "job_1 job_2 job_3 job_4 ";
@@ -223,9 +237,6 @@ header {
         margin-left: auto;
         margin-right: auto;
     } 
-    
-    #education { grid-area: education; }
-    #skills { grid-area: skills; }
 
     .education_skills {
         display: grid;
