@@ -33,7 +33,12 @@ div { grid-area: div; }
     opacity: 70%;
 }
 
-@media only screen and (min-width: 480px) {
+.experience {
+    
+
+}
+
+@media only screen and (min-width: 0px) {
 
 /*mobile*/
 
@@ -137,7 +142,6 @@ header {
     grid-template-areas: "education skills";
 }
 
-
 } /*close tablet*/
 
 @media only screen and (min-width: 992px) {
@@ -237,6 +241,9 @@ header {
         margin-left: auto;
         margin-right: auto;
     } 
+    
+    #education { grid-area: education; }
+    #skills { grid-area: skills; }
 
     .education_skills {
         display: grid;
