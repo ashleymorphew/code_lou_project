@@ -107,46 +107,33 @@
             </div>
         </section>
     </main>
-
-    <div class="form-body">
-
-        <div id="form">
-        <h3 class="h3">CONTACT ME</h3>
-    
-        <form id="contact">
-            
-            <div class="form-group">
-                <label for="Name" class="label">Your name</label>
-                <div class="input-group">
-                    <input type="text" id="Name" name="Name" class="form-control" required>
-                </div>
-            </div>
-    
-            <div class="form-group">
-                <label for="Email" class="label">Your email address</label>
-                <div class="input-group">
-                    <input type="email" id="Email" name="Email" class="form-control" required>
-                </div>
-            </div>
-    
-            <div class="form-group">
-                <label for="Message" class="label">Your message</label>
-                <div class="input-group">
-                    <textarea id="Message" name="Message" class="form-control" rows="6" maxlength="3000" required></textarea>
-                </div>
-            </div>
-    
-            <div class="form-group">
-                <button type="submit" id="button" class="button">Send Message</button>
-            </div>
-    
-          
-    
-        </form>
+    <form name="contactForm" onsubmit="return validateForm()"
+    action="confirmation.php" method="post">
+        <h2>CONTACT ME</h2>
+        <div class="row">
+            <label>Full Name</label>
+            <input type="text" name="name">
+            <div class="error" id="nameErr"></div>
         </div>
+        <div class="row">
+            <label>Email Address</label>
+            <input type="text" name="email">
+            <div class="error" id="emailErr"></div>
+        </div>
+        <div class="message">
+            <label>Message</label>
+            <textarea cols="38" rows="8" name="Message"></textarea>
+            <div class="error" id="messageErr"></div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
     
-    </div>
-    </div>
+            
+    
+    
+    
     <script src="script.js"></script>
     </body>
     </html>
