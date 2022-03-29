@@ -2,7 +2,7 @@
 
 Resume
 
-This is my final project for Code Louisville front end web development course one. It is a resume page that includes a summary, job experience, education, skills, and a contact form. 
+This is a one-page resume website that includes my summary, job experience, education, skills, and a contact form. 
 
 Selected features:
 
