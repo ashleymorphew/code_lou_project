@@ -2,7 +2,7 @@
 
 body{
     font-family: 'Bodoni Moda', serif;
-    background-image: radial-gradient(rgb(90, 85, 138), rgb(155, 101, 124));
+    background-image: radial-gradient(rgb(90, 85, 138), rgb(126, 99, 111));
     
 }
 
@@ -25,7 +25,7 @@ div { grid-area: div; }
     margin-left: auto;
     margin-right: auto;
     width: auto;
-    height: 18rem;
+    height: 15rem;
     border-radius: 50px;
 }
 
@@ -34,7 +34,7 @@ div { grid-area: div; }
 }
 
 form {
-    width: 300px;
+    width: 250px;
     background: rgba(255, 255, 255, 0.63);
     padding: 15px 40px 40px;
     border: 1px solid #ccc;
@@ -136,7 +136,6 @@ header > h1 {
 }
 
 .navbar {
-    overflow: hidden;
     background-color: rgb(66, 66, 66);
     position: relative;
 }
@@ -213,10 +212,8 @@ header {
 
     .container {   
         padding-top: 1.2em;
-        padding-bottom: 1.2em;
         width: 100%;
         margin: auto;
-    
     }
 
     .navbar {
@@ -237,15 +234,13 @@ header {
     }
 
     .logos {
-        padding-left: 50px;
-        
+        padding-left: 50px; 
     }
 
     #content {
-        background-color: rgba(242, 255, 255, 0.548);
         width: 95%;
         margin: auto;
-        margin-top: 2em;
+        margin-top: .5em;
     }
 
     #about { grid-area: about; }
@@ -255,7 +250,6 @@ header {
 
     header {
         display: grid;
-        padding-top: 10px;
         grid-template-areas: "h1 h1"
                              "photo about"
                              "logos logos";
@@ -269,8 +263,7 @@ header {
     }
 
     #about {
-        padding-right: 1em;
-        font-size: 20px;
+        font-size: 24px;
         margin: 2em;
     }
 
@@ -300,6 +293,5 @@ header {
         margin-left: auto;
         margin-right: auto;
     }
-
-
+    
 } /*close desktop*/
