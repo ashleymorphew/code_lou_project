@@ -224,7 +224,7 @@ header {
         padding-right: 1em;
     }
 
-    #myLinks {
+    #myLinks { 
         display: flex;
         gap: 4em;
     }

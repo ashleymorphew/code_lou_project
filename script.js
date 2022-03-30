@@ -23,6 +23,9 @@ function validateForm() {
     alert("Email must be filled out!")
     return false;
   }
+  else {
+  alert("Thanks for your interest, I will get back to you soon!")
+  }
 }
 
 
