@@ -1,5 +1,3 @@
-# code_lou_project
-
 Resume
 
 This is a one-page resume website that includes my summary, job experience, education, skills, and a contact form. 
